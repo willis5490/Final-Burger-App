@@ -1,0 +1,42 @@
+
+<div class="row">
+    <div class="col-sm-12">
+        <h1 id="title">Burger Time!!</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <img src="/assests/img/evil-cartoon-burger-clipart-6.jpg" alt="a-mean-burger">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-3 offset-sm-3" id="goodBurger">
+        <h4>Bugers to eat</h4>
+        <ol>
+            {{#each burgers}} 
+            {{#unless devoured}}
+            {{> burgers/burgers-block devoured=1}}
+          {{/unless}}  {{/each}}
+        </ol>
+    </div>
+    <div class="col-sm-3" id="greatBurger">
+        <h4>Bugers that have been eaten</h4>
+        <ol>
+            {{#each burgers}} {{#if devoured}}
+           {{> burgers/burgersD-block}}
+            {{/if}} {{/each}}
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4 offset-sm-4">
+        <form class="form">
+        <div class="form-group">
+            <label for="burger-name">Burger you crave:</label>
+            <input type="text" id="burger-name" name="name">
+             <button type="submit" id="burgs">Add Burger</button>
+        </div>
+        </form>
+      
+    </div>
+</div>
