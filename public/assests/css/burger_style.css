@@ -32,3 +32,8 @@ margin-bottom: 20px;
 #bods{
     background-color: rgb(238, 100, 8)
 }
+
+/* Mobile Respone */
+@media only screen and (max-width: 480px) {
+    
+}
